@@ -27,7 +27,7 @@ export function Header() {
       className={`fixed top-0 md:px-10 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white shadow-lg py-2"
-          : "bg-transparent md:bg-white py-4"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-8 flex md:grid md:grid-cols-3 items-center justify-between md:gap-4">
@@ -51,19 +51,31 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-8 justify-center">
           <button
             onClick={() => scrollToSection("home")}
-            className="text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 text-foreground hover:text-primary cursor-pointer"
+            className={`text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 cursor-pointer ${
+              isScrolled
+                ? "text-foreground hover:text-primary"
+                : "text-white hover:text-white/80"
+            }`}
           >
             Home
           </button>
           <button
             onClick={() => scrollToSection("caracteristicas")}
-            className="text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 text-foreground hover:text-primary cursor-pointer"
+            className={`text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 cursor-pointer ${
+              isScrolled
+                ? "text-foreground hover:text-primary"
+                : "text-white hover:text-white/80"
+            }`}
           >
             Características
           </button>
           <button
             onClick={() => scrollToSection("contacto")}
-            className="text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 text-foreground hover:text-primary cursor-pointer"
+            className={`text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 cursor-pointer ${
+              isScrolled
+                ? "text-foreground hover:text-primary"
+                : "text-white hover:text-white/80"
+            }`}
           >
             Contacto
           </button>
