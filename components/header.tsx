@@ -42,7 +42,7 @@ export function Header() {
               width={120}
               height={80}
               className={`w-auto transition-all duration-300 ease-out group-hover:brightness-110 ${
-                isScrolled ? "h-12" : "h-16"
+                isScrolled ? "h-12" : "h-20"
               }`}
             />
           </button>

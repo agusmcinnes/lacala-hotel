@@ -51,7 +51,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2 animate-hero-buttons">
               <Button
                 size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-base transition-all duration-300 ease-out hover:scale-[1.05] hover:shadow-xl hover:-translate-y-0.5 active:scale-95 active:translate-y-0 gap-2 group"
+                className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-base transition-all duration-300 ease-out hover:scale-[1.05] hover:shadow-xl hover:-translate-y-0.5 active:scale-95 active:translate-y-0 gap-2 group cursor-pointer"
                 onClick={() => window.open("https://wa.me/5548999999999", "_blank")}
               >
                 <Send className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -61,7 +61,7 @@ export function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:text-white bg-black/30 hover:bg-white/20 transition-all duration-300 ease-out hover:scale-[1.05] hover:-translate-y-0.5 active:scale-95 active:translate-y-0 gap-2 group backdrop-blur-sm"
+                className="border-2 border-white text-white hover:text-white bg-black/30 hover:bg-white/20 transition-all duration-300 ease-out hover:scale-[1.05] hover:-translate-y-0.5 active:scale-95 active:translate-y-0 gap-2 group backdrop-blur-sm cursor-pointer"
                 onClick={() => {
                   const element = document.getElementById("caracteristicas")
                   if (element) element.scrollIntoView({ behavior: "smooth" })
