@@ -175,9 +175,48 @@ export function Features() {
           })}
         </div>
 
+        {/* Sección: Nuestra Recepción */}
         <div
           className={`text-center mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           style={{ transitionDelay: "800ms" }}
+        >
+          <h3 className="text-2xl md:text-3xl font-bold">
+            Nuestra <span className="text-primary">Recepción</span>
+          </h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-20">
+          {[
+            { src: "/recepcion/inicio-vertical.png", alt: "Recepción Hotel Lacala", colSpan: 1 },
+            { src: "/recepcion/recepcion1-vertical.jpg", alt: "Recepción Hotel Lacala 1", colSpan: 1 },
+            { src: "/recepcion/recepcion2-vertical.jpg", alt: "Recepción Hotel Lacala 2", colSpan: 1 },
+            { src: "/recepcion/recepcion4-vertical.jpg", alt: "Recepción Hotel Lacala 4", colSpan: 1 },
+            { src: "/recepcion/recepcion3-horizontal.jpg", alt: "Recepción Hotel Lacala 3", colSpan: 2 },
+          ].map((room, index) => (
+            <div
+              key={index}
+              className={`relative overflow-hidden rounded-lg shadow-md hover:shadow-2xl hover:shadow-secondary/50 group aspect-[3/4] md:aspect-[3/4] transition-opacity transition-transform duration-700 ${
+                room.colSpan === 2 ? "md:col-span-2 md:aspect-[9/4]" : ""
+              } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              style={{
+                transitionDelay: `${(index + 8) * 80}ms`,
+                transition: 'opacity 0.7s, transform 0.7s, box-shadow 0.15s'
+              }}
+            >
+              <Image
+                src={room.src}
+                alt={room.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover object-center scale-105 group-hover:scale-110 transition-transform duration-700 ease-out"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div
+          className={`text-center mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          style={{ transitionDelay: "1200ms" }}
         >
           <h3 className="text-2xl md:text-3xl font-bold">
             Nuestras <span className="text-primary">Habitaciones</span>
@@ -268,12 +307,15 @@ export function Features() {
         >
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
             <div className="relative aspect-[16/9]">
-              <Image
-                src="/ubi-maps.png"
-                alt="Ubicación Hotel Lacala en Google Maps"
-                fill
-                sizes="(max-width: 768px) 100vw, 768px"
-                className="object-cover"
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.8!2d-48.4537445!3d-27.4295399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952743bad7973311%3A0x19d7d9f1e4edf642!2sHotel%20Lacala!5e0!3m2!1ses!2sbr!4v1700000000000"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0"
               />
             </div>
             <div className="p-6 text-center">
