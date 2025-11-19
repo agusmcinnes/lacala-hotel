@@ -52,7 +52,7 @@ export function Hero() {
               <Button
                 size="lg"
                 className="bg-secondary hover:bg-secondary/90 text-white font-semibold text-base transition-all duration-300 ease-out hover:scale-[1.05] hover:shadow-xl hover:-translate-y-0.5 active:scale-95 active:translate-y-0 gap-2 group cursor-pointer"
-                onClick={() => window.open("https://wa.me/5548999999999", "_blank")}
+                onClick={() => window.open("https://wa.me/5548991573709", "_blank")}
               >
                 <Send className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 Reservar ahora

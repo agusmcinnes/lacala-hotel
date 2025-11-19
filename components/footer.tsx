@@ -12,12 +12,12 @@ export function Footer() {
             </div>
             <h3 className="text-lg font-semibold mb-3">WhatsApp</h3>
             <a
-              href="https://wa.me/5548999999999"
+              href="https://wa.me/5548991573709"
               className="text-white/90 hover:text-white transition-all duration-300 text-sm hover:underline"
               target="_blank"
               rel="noopener noreferrer"
             >
-              +55 (48) 99999-9999
+              +55 (48) 99157-3709
             </a>
           </div>
 

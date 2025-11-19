@@ -83,7 +83,7 @@ export function Header() {
 
         <div className="flex justify-end">
           <Button
-            onClick={() => window.open("https://wa.me/5548999999999", "_blank")}
+            onClick={() => window.open("https://wa.me/5548991573709", "_blank")}
             className="font-semibold transition-all duration-300 ease-out hover:scale-110 hover:-translate-y-0.5 active:scale-95 active:translate-y-0 hover:shadow-xl hover:shadow-secondary/50 bg-secondary hover:bg-secondary/90 text-white cursor-pointer"
           >
             Reserva ahora!
