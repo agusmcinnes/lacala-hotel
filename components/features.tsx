@@ -101,7 +101,7 @@ export function Features() {
     <section id="caracteristicas" className="py-20 px-10 bg-muted/30" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div
-          className={`text-center mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`text-center mb-16 transition-all duration-700 animate-on-scroll ${isVisible ? "is-visible" : "is-hidden"}`}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             ¿Por qué elegir <span className="text-primary">Hotel Lacala</span>?
@@ -117,8 +117,8 @@ export function Features() {
             return (
               <div
                 key={index}
-                className={`bg-white p-6 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500 text-center group hover:-translate-y-2 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                className={`bg-white p-6 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500 text-center group hover:-translate-y-2 animate-on-scroll ${
+                  isVisible ? "is-visible" : "is-hidden"
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
@@ -136,7 +136,7 @@ export function Features() {
 
         {/* Sección: Descubre los alrededores */}
         <div
-          className={`text-center mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`text-center mb-12 transition-all duration-700 animate-on-scroll ${isVisible ? "is-visible" : "is-hidden"}`}
           style={{ transitionDelay: "400ms" }}
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
@@ -153,8 +153,8 @@ export function Features() {
             return (
               <div
                 key={index}
-                className={`bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-500 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                className={`bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-500 animate-on-scroll ${
+                  isVisible ? "is-visible" : "is-hidden"
                 }`}
                 style={{ transitionDelay: `${(index + 4) * 100}ms` }}
               >
@@ -183,7 +183,7 @@ export function Features() {
 
         {/* Sección: Nuestra Recepción */}
         <div
-          className={`text-center mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`text-center mb-12 transition-all duration-700 animate-on-scroll ${isVisible ? "is-visible" : "is-hidden"}`}
           style={{ transitionDelay: "800ms" }}
         >
           <h3 className="text-2xl md:text-3xl font-bold">
@@ -201,12 +201,12 @@ export function Features() {
           ].map((room, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden rounded-lg shadow-md hover:shadow-2xl hover:shadow-secondary/50 group aspect-[3/4] md:aspect-[3/4] transition-opacity transition-transform duration-700 ${
+              className={`relative overflow-hidden rounded-lg shadow-md hover:shadow-2xl hover:shadow-secondary/50 group aspect-[3/4] md:aspect-[3/4] animate-on-scroll ${
                 room.colSpan === 2 ? "md:col-span-2 md:aspect-[9/4]" : ""
-              } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              } ${isVisible ? "is-visible" : "is-hidden"}`}
               style={{
                 transitionDelay: `${(index + 8) * 80}ms`,
-                transition: 'opacity 0.7s, transform 0.7s, box-shadow 0.15s'
+                transition: 'opacity 0.7s ease-out, transform 0.7s ease-out, box-shadow 0.15s ease-out'
               }}
             >
               <Image
@@ -221,7 +221,7 @@ export function Features() {
         </div>
 
         <div
-          className={`text-center mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`text-center mb-12 transition-all duration-700 animate-on-scroll ${isVisible ? "is-visible" : "is-hidden"}`}
           style={{ transitionDelay: "1200ms" }}
         >
           <h3 className="text-2xl md:text-3xl font-bold">
@@ -240,12 +240,12 @@ export function Features() {
           ].map((room, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden rounded-lg shadow-md hover:shadow-2xl hover:shadow-secondary/50 group aspect-[4/3] md:aspect-auto md:h-full transition-opacity transition-transform duration-700 ${
+              className={`relative overflow-hidden rounded-lg shadow-md hover:shadow-2xl hover:shadow-secondary/50 group aspect-[4/3] md:aspect-auto md:h-full animate-on-scroll ${
                 room.rowSpan === 3 ? "md:row-span-3" : room.rowSpan === 2 ? "md:row-span-2" : ""
-              } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              } ${isVisible ? "is-visible" : "is-hidden"}`}
               style={{
                 transitionDelay: `${(index + 4) * 80}ms`,
-                transition: 'opacity 0.7s, transform 0.7s, box-shadow 0.15s'
+                transition: 'opacity 0.7s ease-out, transform 0.7s ease-out, box-shadow 0.15s ease-out'
               }}
             >
               <Image
@@ -260,7 +260,7 @@ export function Features() {
         </div>
 
         <div
-          className={`text-center mb-12 mt-20 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`text-center mb-12 mt-20 transition-all duration-700 animate-on-scroll ${isVisible ? "is-visible" : "is-hidden"}`}
           style={{ transitionDelay: "800ms" }}
         >
           <h3 className="text-2xl md:text-3xl font-bold">
@@ -277,10 +277,10 @@ export function Features() {
           ].map((breakfast, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden rounded-lg shadow-md hover:shadow-2xl hover:shadow-secondary/50 group aspect-square h-full transition-opacity transition-transform duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`relative overflow-hidden rounded-lg shadow-md hover:shadow-2xl hover:shadow-secondary/50 group aspect-square h-full animate-on-scroll ${isVisible ? "is-visible" : "is-hidden"}`}
               style={{
                 transitionDelay: `${(index + 10) * 80}ms`,
-                transition: 'opacity 0.7s, transform 0.7s, box-shadow 0.15s'
+                transition: 'opacity 0.7s ease-out, transform 0.7s ease-out, box-shadow 0.15s ease-out'
               }}
             >
               <Image
@@ -296,7 +296,7 @@ export function Features() {
 
         {/* Sección: Ubicación */}
         <div
-          className={`text-center mb-12 mt-20 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`text-center mb-12 mt-20 transition-all duration-700 animate-on-scroll ${isVisible ? "is-visible" : "is-hidden"}`}
           style={{ transitionDelay: "1200ms" }}
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
@@ -308,7 +308,7 @@ export function Features() {
         </div>
 
         <div
-          className={`max-w-3xl mx-auto transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`max-w-3xl mx-auto transition-all duration-700 animate-on-scroll ${isVisible ? "is-visible" : "is-hidden"}`}
           style={{ transitionDelay: "1300ms" }}
         >
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">

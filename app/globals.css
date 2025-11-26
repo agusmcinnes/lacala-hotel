@@ -225,3 +225,44 @@ html {
     transform: none;
   }
 }
+
+/* Safari compositing fix - fuerza GPU layer para evitar bugs de renderizado */
+.safari-fix {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+/* Fix para elementos que empiezan invisibles en Safari */
+.animate-on-scroll {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Asegurar que las transiciones funcionen en Safari */
+.animate-on-scroll.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) translateZ(0) !important;
+  -webkit-transform: translateY(0) translateZ(0) !important;
+}
+
+/* Fallback: si después de 3s el contenido sigue oculto, mostrarlo */
+@keyframes safariForceVisible {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+    -webkit-transform: translateY(0) translateZ(0);
+  }
+}
+
+.animate-on-scroll.is-hidden {
+  opacity: 0;
+  transform: translateY(2rem) translateZ(0);
+  -webkit-transform: translateY(2rem) translateZ(0);
+  animation: safariForceVisible 0s 3s forwards;
+}
