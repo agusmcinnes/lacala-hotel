@@ -71,6 +71,12 @@ export function Features() {
   const sectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    // Fallback para navegadores sin soporte de IntersectionObserver
+    if (typeof IntersectionObserver === 'undefined') {
+      setIsVisible(true)
+      return
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
